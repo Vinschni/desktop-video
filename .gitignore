@@ -1,2 +1,7 @@
 .env
-video_*
+*.avi
+*.mp4
+desktop_video.build
+desktop_video.dist
+desktop_video.onefile-build
+desktop_video.exe

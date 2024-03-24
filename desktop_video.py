@@ -1,8 +1,6 @@
 import dxcam
 import cv2
-import numpy as np
 from pynput import mouse
-import threading
 from datetime import datetime
 import time
 # Initialize global variables for the rectangle's start and end points, and a flag for stopping recording
@@ -10,7 +8,7 @@ rect_start = None
 rect_end = None
 stop_recording = False
 
-# Function to capture the first two mouse clicks and stop recording on a click at (0, 0)
+# Function to capture the first twyeso mouse clicks and stop recording on a click at (0, 0)
 def on_click(x, y, button, pressed):
     global rect_start, rect_end, stop_recording
     if pressed:
@@ -40,7 +38,7 @@ x, y = rect_start
 w, h = abs(rect_end[0] - rect_start[0]), abs(rect_end[1] - rect_start[1])
 
 # Set target FPS for capturing
-target_fps = 30
+target_fps = 60
 
 # Create a desktop capture object with dxcam for the specified ROI
 camera = dxcam.create(output_idx=0, output_color="BGR", region=(x, y, x+w, y+h))
